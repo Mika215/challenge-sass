@@ -1,0 +1,24 @@
+%message-shared {
+  border: 1px solid $light-gray;
+  padding: 16px;
+  color: $body-background;
+}
+.messages {
+  padding: 16px;
+
+  .success {
+    @extend %message-shared;
+    background-color: green;
+  }
+  /*something is wrong with the hover effect -even though i have assigned it ti the"error" class it is affecting the "warning" class*/
+  .error + :hover {
+    @extend %message-shared;
+    background-color: red;
+    background-color: green;
+  }
+
+  .warning {
+    @extend %message-shared;
+    background-color: orange;
+  }
+}

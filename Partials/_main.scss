@@ -1,0 +1,55 @@
+@mixin my-shadow {
+  /*i can't get the point of mixin! uffff!*/
+}
+
+main {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    section {
+      flex-grow: 1;
+      flex-basis: 45%;
+      border: 1px$light-gray solid;
+      -webkit-box-shadow: 10px 10px 15px -4px $light-gray-blue;
+      -moz-box-shadow: 10px 10px 15px -4px $light-gray-blue;
+      box-shadow: 10px 10px 15px -4px $light-gray-blue;
+      padding: 16px;
+      margin: 16px;
+      clear: both;
+      overflow: auto;
+      box-sizing: border-box;
+
+      #selling-points {
+        flex-grow: 2;
+        flex-basis: 100%;
+      }
+    }
+    code {
+      background: $black;
+      border: 1px solid $light-gray-blue;
+      color: $light-gray;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+      max-width: 100%;
+      overflow: auto;
+      padding: 1em 1.5em;
+      display: block;
+      word-wrap: break-word;
+
+      :before {
+        float: left;
+        width: 40%;
+      }
+      :after {
+        float: right;
+        width: 40%;
+      }
+    }
+  }
+}
